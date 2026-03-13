@@ -6,7 +6,7 @@ function App() {
 
   useEffect(() => {
     const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
-    axios.get(`${apiUrl}/api/status`)
+    axios.get(`${apiUrl}/status`)
       .then(response => {
         setBackendStatus(response.data.message);
       })
